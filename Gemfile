@@ -57,6 +57,8 @@ group :development, :test do
 
   # Used as the testing suite.
   gem "rspec-rails"
+  # Used to test our controllers.
+  gem 'rails-controller-testing'
 end
 
 group :development do
