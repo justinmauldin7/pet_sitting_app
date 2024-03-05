@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :bookings, only: [:new, :create]
+
+  namespace :admin do
+    resources :bookings, only: [:index]
+  end
 end
