@@ -61,6 +61,8 @@ group :development, :test do
   gem 'rails-controller-testing'
   # used for testing our UI components in our views.
   gem "capybara"
+  # used to test the order of elements showing on a page in our UI/feature tests.
+  gem 'orderly'
 end
 
 group :development do
