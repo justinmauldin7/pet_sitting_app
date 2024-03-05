@@ -35,3 +35,9 @@
     <%= form.submit "Submit Booking" %>
   </div>
 <% end %>
+
+<% flash.each do |type, message| %>
+  <div>
+    <%= message %>
+  </div>
+<% end %>
