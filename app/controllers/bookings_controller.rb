@@ -4,7 +4,15 @@ class BookingsController < ApplicationController
   end
 
   def create 
+    @booking = Booking.new(booking_params)
 
+    if @booking.save
+      flash[:message] = "Booking record successfully created."
+      redirect_to new_booking_path
+    else
+      flash[:message] = "ERROR: Booking NOT created."
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
