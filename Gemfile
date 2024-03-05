@@ -59,6 +59,8 @@ group :development, :test do
   gem "rspec-rails"
   # Used to test our controllers.
   gem 'rails-controller-testing'
+  # used for testing our UI components in our views.
+  gem "capybara"
 end
 
 group :development do
