@@ -32,7 +32,7 @@ RSpec.describe BookingsController, type: :controller do
     it "should create a booking with valid attributes" do
       expect { post :create, params: valid_params }.to change { Booking.count }.by(1)
 
-      expect(response).to redirect_to bookings_path
+      expect(response).to redirect_to new_booking_path
     end
 
     it "should not create a booking with invalid attributes" do
