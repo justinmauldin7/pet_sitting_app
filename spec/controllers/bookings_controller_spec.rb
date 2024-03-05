@@ -24,6 +24,7 @@ RSpec.describe BookingsController, type: :controller do
     it 'should render new page' do
       get :new
 
+      expect(response.status).to eq(200)
       expect(response).to render_template :new
     end
   end
