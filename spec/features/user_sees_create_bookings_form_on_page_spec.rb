@@ -7,13 +7,13 @@ describe "user sees create bookings form on the bookings new page" do
     expect(page).to have_content("New Booking")
 
     expect(page).to have_content("First Name")
-    expect(page).to have_selector("input#first_name")
+    expect(page).to have_selector("input#booking_first_name")
 
     expect(page).to have_content("Last Name")
-    expect(page).to have_selector("input#last_name")
+    expect(page).to have_selector("input#booking_last_name")
 
     expect(page).to have_content("Animal Name")
-    expect(page).to have_selector("input#animal_name")
+    expect(page).to have_selector("input#booking_animal_name")
 
     expect(page).to have_content("Animal Type")
     expect(page).to have_select('Animal Type',
@@ -26,9 +26,9 @@ describe "user sees create bookings form on the bookings new page" do
                                 )
 
     expect(page).to have_content("Date of Service")
-    expect(page).to have_selector("select#_date_of_service_1i")
-    expect(page).to have_selector("select#_date_of_service_2i")
-    expect(page).to have_selector("select#_date_of_service_3i")
+    expect(page).to have_selector("select#booking_date_of_service_1i")
+    expect(page).to have_selector("select#booking_date_of_service_2i")
+    expect(page).to have_selector("select#booking_date_of_service_3i")
 
     expect(page).to have_button("Submit Booking")
   end
