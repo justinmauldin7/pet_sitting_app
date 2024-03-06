@@ -43,5 +43,15 @@ RSpec.describe Booking, type: :model do
       
       expect(booking).to eq(true)
     end
+
+    it 'ensures presence of cost of service' do 
+      booking = Booking.create(first_name: 'John', last_name: 'Smith', animal_name: 'Rufus', animal_type: 'dog', hours_requested: 2, date_of_service: '03-04-2024')
+
+      base_charge = 20
+      dog_per_hour_rate = 10
+      expected_cost_of_service = base_charge + (dog_per_hour_rate * booking.hours_requested)
+
+      expect(booking.cost_of_service).to eq(expected_cost_of_service)
+    end
   end
 end
