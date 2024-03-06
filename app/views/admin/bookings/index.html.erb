@@ -2,14 +2,14 @@
 
 <% @bookings.each do |booking| %>
   <div id="booking-<%= booking.id %>">
-    <h1><%= booking.first_name %> <%= booking.last_name %></h1>
+    <h1>User Name: <%= booking.first_name %> <%= booking.last_name %></h1>
 
-    <h3><%= booking.animal_name%></h3>
+    <h3>Animal Name: <%= booking.animal_name %></h3>
 
-    <h3><%= booking.animal_type%></h3>
+    <h3>Animal Type: <%= booking.animal_type %></h3>
 
-    <h3><%= booking.hours_requested%></h3>
+    <h3>Hours Requested: <%= booking.hours_requested %></h3>
 
-    <h3><%= booking.date_of_service%></h3>
+    <h3>Date of Service: <%= booking.date_of_service %></h3>   
   </div>
 <% end %>
