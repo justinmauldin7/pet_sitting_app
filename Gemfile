@@ -51,6 +51,18 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  # Preferred debugging tool.
+  gem "pry"
+
+  # Used as the testing suite.
+  gem "rspec-rails"
+  # Used to test our controllers.
+  gem 'rails-controller-testing'
+  # used for testing our UI components in our views.
+  gem "capybara"
+  # used to test the order of elements showing on a page in our UI/feature tests.
+  gem 'orderly'
 end
 
 group :development do

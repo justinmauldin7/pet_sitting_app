@@ -1,0 +1,17 @@
+<h1>All Bookings</h1>
+
+<% @bookings.each do |booking| %>
+  <div id="booking-<%= booking.id %>">
+    <h2>User Name: <%= booking.first_name %> <%= booking.last_name %></h2>
+
+    <h3>Animal Name: <%= booking.animal_name %></h3>
+
+    <h3>Animal Type: <%= booking.animal_type %></h3>
+
+    <h3>Hours Requested: <%= booking.hours_requested %></h3>
+
+    <h3>Date of Service: <%= booking.date_of_service %></h3>
+
+    <h3>Cost of Service: $<%= booking.cost_of_service %></h3>   
+  </div>
+<% end %>
